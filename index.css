@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
+
+* {
+    font-size: 12px;;
+    font-family: 'Inconsolata', monospace;
+}
+
+.ticket {
+    width: 475px;
+    max-width: 475px;
+}
+.hidden-print{
+    text-align: center;
+    margin-top: 18px;
+    width: 100%;
+}
+@media print {
+    .hidden-print,
+    .hidden-print * {
+        display: none !important;
+    }
+}
