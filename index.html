@@ -15,7 +15,7 @@
         width: 100%;
         height: 90vh;
       }
-     .bill{
+      .bill{
         text-align: center;
         width: 300px;
       }
@@ -34,7 +34,7 @@
   <div class="ticket">
     <div class="bill">
         <h3>Delivery Challan</h3>
-        <div id="date"></div> 
+        <div id="date">Date: <span contenteditable="true">-------</span><span contenteditable="true">-------</span></div> 
         <div>DC/Ref #: <span contenteditable="true" style="width: 20px;">0000</span></div>
         <hr/>
         <h2>Outgoing Trip</h2> 
@@ -86,20 +86,19 @@
 </body>
 <script>
 const $btnPrint = document.querySelector("#btnPrint");
-var ts = new Date()
-var date = ts.getDate();
-var month = ts.getMonth() + 1;
-var year = ts.getFullYear();
-var time = new Date().toLocaleTimeString()
-document.getElementById('date').innerHTML = `Date: ${date}-${month}-${year} Time: ${time}` 
+// var ts = new Date()
+// var date = ts.getDate();
+// var month = ts.getMonth() + 1;
+// var year = ts.getFullYear();
+// var time = new Date().toLocaleTimeString()
+// document.getElementById('date').innerHTML = `Date: ${date}-${month}-${year} Time: ${time}` 
 $btnPrint.addEventListener("click", () => {
-    ts = new Date()
-    date = ts.getDate();
-    month = ts.getMonth() + 1;
-    year = ts.getFullYear();
-    time = new Date().toLocaleTimeString()
-    document.getElementById('date').innerHTML = `Date: ${date}-${month}-${year} Time: ${time}` 
-
+    // ts = new Date()
+    // date = ts.getDate();
+    // month = ts.getMonth() + 1;
+    // year = ts.getFullYear();
+    // time = new Date().toLocaleTimeString()
+    // document.getElementById('date').innerHTML = `Date: ${date}-${month}-${year} Time: ${time}` 
     window.print()
 });
 </script>
